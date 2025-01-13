@@ -22,7 +22,7 @@
     <div class="footer-section">
       <h3>Contáctanos</h3>
       <p>
-        Email: <a href="mailto:contacto@e-dino.com">beta@e-dino.mx</a><br>
+        Email: <a href="mailto:contacto@e-dino.com">e-dino-support@e-dino.mx</a><br>
         Teléfono: +52 2711144431<br>
         Ubicación: C. 39 2725, Paraiso, 94650 Córdoba, Ver.
       </p>
