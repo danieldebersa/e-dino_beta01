@@ -1,0 +1,542 @@
+:root {
+    --primary-color: #a3fcaf; 
+    --secondary-color: #003366; 
+    --background-color: #2976c4;
+    --text-color: #e0e0e0; 
+    --button-bg: #004080;
+    --button-hover: #a3fcaf;
+    --header-bg: rgba(0, 64, 128, 0.6); 
+    --footer-bg: rgba(0, 64, 128, 0.6); 
+    --header-text: #ffffff; 
+    --footer-text: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+main {
+    flex: 1;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form div {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--text-color);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: var(--primary-color);
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: var(--button-bg);
+    color: white;
+    padding: 0.5rem 1rem; 
+    border: none;
+    border-radius: 5px;
+    font-size: 0.875rem; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 1rem; 
+}
+
+button:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: var(--secondary-color);
+    color: var(--header-text);
+}
+
+th,
+td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+th {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+tbody tr:hover {
+    background-color: rgba(163, 252, 175, 0.1);
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--text-color);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+    border-color: var(--primary-color);
+}
+
+input[type="number"]:invalid {
+    border-color: #ff4d4d;
+}
+
+input[type="number"]:disabled {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+}
+
+td input[type="number"] {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--text-color);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+button.delete-criterio {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e62222;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    transition: all 200ms ease-in-out;
+  }
+  
+  button.delete-criterio, button.delete-criterio span {
+    transition: 200ms;
+  }
+  
+  button.delete-criterio .text {
+    transform: translateX(35px);
+    color: white;
+    font-weight: bold;
+  }
+  
+  button.delete-criterio .icon {
+    position: absolute;
+    border-left: 1px solid #c41b1b;
+    transform: translateX(110px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 200ms, width 200ms;
+  }
+  
+  button.delete-criterio svg {
+    width: 15px;
+    fill: #eee;
+  }
+  
+  button.delete-criterio:hover {
+    background: #ff3636;
+  }
+  
+  button.delete-criterio:hover .text {
+    color: transparent;
+  }
+  
+  button.delete-criterio:hover .icon {
+    width: 150px;
+    border-left: none;
+    transform: translateX(0);
+  }
+  
+  button.delete-criterio:focus {
+    outline: none;
+  }
+  
+  /* Efecto active en el icono */
+  button.delete-criterio:active .icon svg {
+    transform: scale(0.8);
+  }
+  
+/*save button */
+
+#save {
+    font-family: inherit;
+    font-size: 18px; 
+    background: #212121;
+    color: white;
+    fill: rgb(155, 153, 153);
+    width: 180px; 
+    height: 60px; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    cursor: pointer;
+    border: none;
+    border-radius: 10px; 
+    font-weight: 700;
+    padding: 0 1.5em; 
+}
+
+#save span {
+    display: block;
+    margin-left: 0.5em; 
+    transition: all 0.3s ease-in-out;
+}
+
+#save svg {
+    display: block;
+    width: 24px; 
+    height: 24px;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+}
+
+#save:hover {
+    background: #000;
+}
+
+#save:hover .svg-wrapper {
+    transform: scale(1.25);
+    transition: 0.5s linear;
+}
+
+#save:hover svg {
+    transform: translateX(1.2em) scale(1.1);
+    fill: #fff;
+}
+
+#save:hover span {
+    opacity: 0;
+    transition: 0.5s linear;
+}
+
+#save:active {
+    transform: scale(0.95);
+}
+
+/* button add */ 
+#add-criterio {
+    width: 180px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: #00a600;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    background: #00a600;
+  }
+  
+  #add-criterio,
+  #add-criterio span {
+    transition: 200ms;
+  }
+  
+  #add-criterio .text {
+    transform: translateX(35px);
+    color: white;
+    font-weight: bold;
+  }
+  
+  #add-criterio .icon {
+    position: absolute;
+    border-left: 1px solid #007300;
+    transform: translateX(110px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #add-criterio svg {
+    width: 15px;
+    fill: #eee;
+  }
+  
+  #add-criterio:hover {
+    background: #00a600;
+  }
+  
+  #add-criterio:active {
+    background: #00cc00;
+  }
+  
+  #add-criterio:hover .text {
+    color: transparent;
+  }
+  
+  #add-criterio:hover .icon {
+    width: 150px;
+    border-left: none;
+    transform: translateX(0);
+  }
+  
+  #add-criterio:focus {
+    outline: none;
+  }
+  
+  #add-criterio:active .icon svg {
+    transform: scale(0.8);
+  }
+  
+  .buttonSpan {
+    color: white;
+    margin: 150px;
+    font-size: 30px;
+  }
+  
+  @media (max-width: 1024px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    main {
+        margin: 1.5rem;
+        padding: 1rem;
+    }
+
+    button {
+        font-size: 0.75rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    input[type="text"], input[type="number"], textarea {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    main {
+        margin: 1rem;
+        padding: 0.8rem;
+    }
+
+    form {
+        padding: 0;
+    }
+
+    input[type="text"], input[type="number"], textarea {
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+        padding: 0.8rem 0;
+    }
+
+    #save {
+        width: 150px;
+        height: 50px;
+    }
+
+    #add-criterio {
+        width: 150px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    main {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+
+    table th, table td {
+        font-size: 0.9rem;
+    }
+
+    #save {
+        width: 130px;
+        height: 45px;
+    }
+
+    #add-criterio {
+        width: 130px;
+        height: 45px;
+    }
+
+    .buttonSpan {
+        font-size: 20px;
+    }
+}
+
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: var(--secondary-color);
+    color: var(--header-text);
+}
+
+th, td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+th {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+tbody tr:hover {
+    background-color: rgba(163, 252, 175, 0.1);
+}

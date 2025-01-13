@@ -1,0 +1,316 @@
+:root {
+    --primary-color: #4a90e2; /*  secColor principal */
+    --secondary-color: #34a853; /* Colorundario */
+    --background-color-start: #e0eafc; /* Color inicial del degradado */
+    --background-color-end: #cfdef3; /* Color final del degradado */
+    --text-color: #202124; /* Color del texto */
+    --text-light-color: #5f6368; /* Color de texto ligero */
+    --header-bg-color: rgba(53, 122, 232, 0.9); /* Fondo de la cabecera */
+    --button-hover-color: #185abc; /* Color de hover para botones */
+    --button-hover-secondary: #0c8035; /* Color de hover para botones secundarios */
+    --border-radius: 12px; /* Radio de bordes */
+    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra de caja */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom right, var(--background-color-start), var(--background-color-end));
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 1s; /* Efecto de desvanecimiento al cargar */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Header */
+.dashboard-header {
+    background-color: var(--header-bg-color);
+    color: white;
+    padding: 16px 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s; /* Transición para el fondo de la cabecera */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 24px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s; /* Transición de color para enlaces de navegación */
+}
+
+.nav-menu a:hover {
+    color: #e1e1e1; /* Color en hover para enlaces */
+}
+
+/* Main */
+.dashboard-main {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.welcome-section h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    font-size: 20px;
+    color: var(--text-light-color);
+    margin-bottom: 40px;
+}
+
+/* Action Buttons */
+.actions-section {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+    justify-content: center;
+}
+
+.action-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s; /* Transición para el hover */
+}
+
+.action-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    background-color: var(--button-hover-color); /* Cambio de color en hover */
+}
+
+#join-class-btn, #view-classes-btn {
+    background-color: var(--secondary-color);
+}
+
+#join-class-btn:hover, #view-classes-btn:hover {
+    background-color: var(--button-hover-secondary); /* Cambio de color en hover para botones secundarios */
+}
+
+/* Classes Section */
+.classes-section h3 {
+    font-size: 26px;
+    color: var(--text-color);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.classes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.class-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones de tarjetas */
+    overflow: hidden;
+}
+
+.class-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.class-card h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.class-card p {
+    font-size: 16px;
+    color: var(--text-light-color);
+}
+
+.class-card .class-action-btn {
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: var(--box-shadow);
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones para el botón de acción */
+}
+
+.class-card .class-action-btn:hover {
+    background-color: var(--button-hover-color);
+    transform: translateY(-3px); /* Efecto en hover */
+}
+
+/* Progress Section */
+.progress-section h3 {
+    font-size: 26px;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+/* Footer */
+.dashboard-footer {
+    background-color: var(--primary-color);
+    padding: 30px 0;
+    text-align: center;
+    color: white;
+    margin-top: 60px;
+    font-size: 14px;
+}
+
+.dashboard-footer p {
+    margin: 0;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    width: 500px;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    transition: transform 0.3s; /* Transición para el modal */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #888;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #dadce0;
+    border-radius: var(--border-radius);
+    background-color: #f5f5f5;
+    transition: border-color 0.3s; /* Transición de color de borde */
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.submit-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición de color de fondo */
+}
+
+.submit-btn:hover {
+    background-color: var(--button-hover-secondary); /* Cambio de color de fondo en hover */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .dashboard-main {
+        padding: 20px;
+    }
+
+    .actions-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .classes-container {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
+

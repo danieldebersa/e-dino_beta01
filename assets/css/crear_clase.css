@@ -1,0 +1,268 @@
+:root {
+    --primary-color: #a3fcaf; 
+    --secondary-color: #003366; 
+    --background-color: #2976c4;
+    --text-color: #e0e0e0; 
+    --button-bg: #004080;
+    --button-hover: #a3fcaf;
+    --header-bg: rgba(0, 64, 128, 0.6); 
+    --footer-bg: rgba(0, 64, 128, 0.6); 
+    --header-text: #ffffff; 
+    --footer-text: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    background-image: url('../images/font-cc.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+.dashboard-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.logo a {
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.nav-menu ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.nav-menu a:hover {
+    background-color: #1c2d54;
+}
+
+/* Main Content */
+h2 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+
+form {
+    width: 80%;
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+form div {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--text-color);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: var(--primary-color);
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: var(--button-bg);
+    color: white;
+    padding: 0.5rem 1rem; 
+    border: none;
+    border-radius: 5px;
+    font-size: 0.875rem; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 1rem; 
+}
+
+button:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.05);
+}
+
+/* Footer */
+.dashboard-footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Error Message */
+p {
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    main {
+        margin: 1.5rem;
+        padding: 1rem;
+    }
+
+    button {
+        font-size: 0.75rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    input[type="text"], input[type="number"], textarea {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    main {
+        margin: 1rem;
+        padding: 0.8rem;
+    }
+
+    form {
+        padding: 0;
+    }
+
+    input[type="text"], input[type="number"], textarea {
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+        padding: 0.8rem 0;
+    }
+
+    #save {
+        width: 150px;
+        height: 50px;
+    }
+
+    #add-criterio {
+        width: 150px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    main {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+
+    table th, table td {
+        font-size: 0.9rem;
+    }
+
+    #save {
+        width: 130px;
+        height: 45px;
+    }
+
+    #add-criterio {
+        width: 130px;
+        height: 45px;
+    }
+
+    .buttonSpan {
+        font-size: 20px;
+    }
+}

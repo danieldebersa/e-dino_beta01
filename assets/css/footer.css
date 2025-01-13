@@ -1,0 +1,123 @@
+/* Estilos generales para el footer */
+.footer {
+    width: 100%;
+    background-color: #f1f1f1;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos para el logo o título del footer */
+.footer-logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.footer-logo:hover {
+    color: #0056b3;
+}
+
+/* Estilos para los enlaces del footer */
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-link {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-link:hover {
+    color: #0056b3;
+}
+
+/* Estilos para botones en el footer, si se requiere */
+.footer-btn {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.footer-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el texto informativo en el footer */
+.footer-info {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 1024px) {
+    .footer-container {
+        max-width: 90%;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+    }
+
+    .footer-logo {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .footer-btn {
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-logo {
+        font-size: 1rem;
+    }
+
+    .footer-link {
+        font-size: 0.9rem;
+    }
+
+    .footer-btn {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+
+    .footer-info {
+        font-size: 0.8rem;
+    }
+}

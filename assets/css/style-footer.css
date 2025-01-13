@@ -1,0 +1,93 @@
+/* Estilos Generales del Footer */
+.footer {
+  background-color: #2b2b2b;
+  color: #ffffff;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  width: 100%; /* Asegura que el footer ocupe todo el ancho */
+  position: relative; /* Posicionamiento relativo para usar dentro del flujo */
+  bottom: 0; /* Mantenerse al final */
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  color: #4caf50;
+}
+
+.footer-section p, .footer-section ul, .footer-section a {
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #4caf50;
+}
+
+/* Redes Sociales */
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Línea divisoria */
+.footer-line {
+  border-top: 1px solid #4caf50;
+  margin: 20px 0;
+}
+
+/* Parte Inferior del Footer */
+.footer-bottom {
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.footer-bottom a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  color: #4caf50;
+}
+
+/* Ajustes para asegurar que el footer quede en la parte inferior */
+html, body {
+  height: 100%; /* Ocupa toda la ventana del navegador */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: -1; /* Crece y ocupa todo el espacio disponible */
+}
