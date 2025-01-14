@@ -109,7 +109,7 @@ session_start();
         <section class="testimonials zoom-in-scroll">
             <h2>Lo que dicen nuestros usuarios</h2>
             <div class="testimonial-item">
-                <img src="./assets/images/user1.jpg" alt="Usuario 1">
+                <img src="assets/images/alumno1.jpg" alt="Usuario 1">
                 <blockquote>“E-Dino cambió mi forma de aprender. Puedo ajustar mi horario de estudio y avanzar a mi propio ritmo.”</blockquote>
                 <h4>Juan Pérez</h4>
                 <span>Estudiante</span>
